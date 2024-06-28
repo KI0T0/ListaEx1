@@ -7,16 +7,19 @@ public class Main {
 
         Pessoa p1 = new Pessoa();
         Pessoa p2 = new Pessoa("João",28,1.90,83);
-        p1.setIdade(30);
+
+        p1.setNome("Maria");
+        p1.setIdade(18);
+        p1.setPeso(45);
+        p1.setAltura(1.50);
+
         p1.envelhecer(5);
+        p1.engordar(2.5);
+        p1.mostrarInformacoes();
 
-        p2.envelhecer(2);
-        System.out.println(p1.getIdade());
-        System.out.println(p2.getIdade());
+        p2.emagrecer(20);
+        p2.mostrarInformacoes();
 
-        p1.engordar(10);
-        p2.engordar(5);
-        System.out.println(p1.getPeso()+"\n"+p2.getPeso());
 
         }
     }

@@ -1,9 +1,13 @@
 public class Pessoa {
+
+
+//  Atributos
     private String nome;
     private int idade;
     private double altura;
     private double peso;
 
+//  Getters and Setters
     public String getNome() {
         return nome;
     }
@@ -36,7 +40,7 @@ public class Pessoa {
         this.peso = peso;
     }
 
-
+//  Construtores
     public Pessoa(){
 
     }
@@ -47,13 +51,22 @@ public class Pessoa {
         setAltura(altura);
         setPeso(peso);
     }
-
+//  Métodos
     public void envelhecer(int ano) {
         setIdade(idade+ano);
     }
 
     public void engordar(double massa) {
         setPeso(peso+massa);
+    }
+
+    public void emagrecer(double massa) {
+        setPeso(peso-massa);
+    }
+
+    public void mostrarInformacoes(){
+        System.out.printf("Nome: "+getNome()+"\nIdade: "+getIdade()
+                +"\nAltura: %.2f\nPeso: %.2f\n---------------------\n",getAltura(),getPeso());
     }
 
 }
